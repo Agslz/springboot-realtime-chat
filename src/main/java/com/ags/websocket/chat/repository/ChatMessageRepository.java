@@ -1,5 +1,6 @@
-package com.ags.websocket.chat;
+package com.ags.websocket.chat.repository;
 
+import com.ags.websocket.chat.ChatMessage;
 import org.springframework.data.mongodb.repository.MongoRepository;
 
 import java.util.List;

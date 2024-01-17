@@ -1,5 +1,7 @@
-package com.ags.websocket.chatroom;
+package com.ags.websocket.chatroom.service;
 
+import com.ags.websocket.chatroom.ChatRoom;
+import com.ags.websocket.chatroom.repository.ChatRoomRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 

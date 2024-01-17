@@ -1,6 +1,8 @@
-package com.ags.websocket.chat;
+package com.ags.websocket.chat.service;
 
-import com.ags.websocket.chatroom.ChatRoomService;
+import com.ags.websocket.chat.ChatMessage;
+import com.ags.websocket.chat.repository.ChatMessageRepository;
+import com.ags.websocket.chatroom.service.ChatRoomService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 

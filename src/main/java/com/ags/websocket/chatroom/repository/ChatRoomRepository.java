@@ -1,5 +1,6 @@
-package com.ags.websocket.chatroom;
+package com.ags.websocket.chatroom.repository;
 
+import com.ags.websocket.chatroom.ChatRoom;
 import org.springframework.data.mongodb.repository.MongoRepository;
 
 import java.util.Optional;
