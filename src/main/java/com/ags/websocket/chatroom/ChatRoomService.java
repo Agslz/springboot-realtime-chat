@@ -11,16 +11,23 @@ public class ChatRoomService {
 
     private final ChatRoomRepository chatRoomRepository;
 
+
     public Optional<String> getChatRoomId(
-            String senderId, String recipientId, boolean createNewRoomIfNotExists
+            String senderId,
+            String recipientId,
+            boolean createNewRoomIfNotExists
     ) {
-        return chatRoomRepository.findBySenderIdAndRecipientId(senderId, recipientId).map(ChatRoom::getChatId).or(() -> {
-            if (createNewRoomIfNotExists) {
-                var chatId = createChatId(senderId, recipientId);
-                return Optional.of(chatId);
-            }
-            return Optional.empty();
-        });
+        return chatRoomRepository
+                .findBySenderIdAndRecipientId(senderId, recipientId)
+                .map(ChatRoom::getChatId)
+                .or(() -> {
+                    if(createNewRoomIfNotExists) {
+                        var chatId = createChatId(senderId, recipientId);
+                        return Optional.of(chatId);
+                    }
+
+                    return  Optional.empty();
+                });
     }
 
     private String createChatId(String senderId, String recipientId) {
